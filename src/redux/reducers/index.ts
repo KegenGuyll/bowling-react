@@ -1,19 +1,12 @@
-import { AnyAction } from 'redux';
-import * as types from '../constants';
+import { combineReducers } from 'redux';
+import userSlice from '../slice/userSlice';
+import scoreSlice from '../slice/scoreSlice';
 
-export interface InitialState {}
+const rootReducer = combineReducers({
+  user: userSlice,
+  score: scoreSlice,
+});
 
-const initialState: InitialState = {};
-
-const rootReducer = (state = initialState, action: AnyAction) => {
-  switch (action.type) {
-    case types.SET_USER_DATA:
-      return {
-        ...state
-      };
-    default:
-      return state;
-  }
-};
+export type RootState = ReturnType<typeof rootReducer>;
 
 export default rootReducer;

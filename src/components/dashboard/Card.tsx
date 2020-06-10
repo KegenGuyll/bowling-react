@@ -5,7 +5,7 @@ interface Props {
   borderColor: string;
   dark: boolean;
   title: string;
-  score: string;
+  score: string | number;
 }
 
 const Card = (props: Props) => {
@@ -18,7 +18,7 @@ const Card = (props: Props) => {
         border: 'unset',
         borderBottom: `5px solid ${borderColor}`,
         borderRadius: '5px',
-        fontWeight: 600
+        fontWeight: 600,
       }}
     >
       <BootstrapCard.Body>
