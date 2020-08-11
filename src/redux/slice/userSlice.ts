@@ -25,15 +25,9 @@ const userSlice = createSlice({
       state.displayName = displayName;
       state.icon = icon;
     },
-    clearUserData(state, action) {
-      state.email = '';
-      state.uid = '';
-      state.displayName = '';
-      state.icon = '';
-    },
   },
 });
 
-export const { setUserData, clearUserData } = userSlice.actions;
+export const { setUserData } = userSlice.actions;
 
 export default userSlice.reducer;

@@ -37,9 +37,9 @@ const LoginCard = (props: Props) => {
   return (
     <BootstrapCard className='login-card'>
       <BootstrapCard.Header>
-        <Link className='float-right' to='/register'>
+        {/* <Link className='float-right' to='/register'>
           <h6 className='mb-0'>Register</h6>
-        </Link>
+        </Link> */}
       </BootstrapCard.Header>
       <h4 className='title-card'>Login</h4>
       <Form>

@@ -5,11 +5,13 @@ interface Props {
   borderColor: string;
   dark: boolean;
   title: string;
-  score: string | number;
+  score?: string | number;
+  Graph?: any;
+  style?: React.CSSProperties | undefined;
 }
 
 const Card = (props: Props) => {
-  const { dark, borderColor, title, score } = props;
+  const { dark, borderColor, title, score, Graph, style } = props;
   return (
     <BootstrapCard
       style={{
@@ -19,11 +21,13 @@ const Card = (props: Props) => {
         borderBottom: `5px solid ${borderColor}`,
         borderRadius: '5px',
         fontWeight: 600,
+        ...style,
       }}
     >
       <BootstrapCard.Body>
         <BootstrapCard.Title>{title}</BootstrapCard.Title>
         <BootstrapCard.Text>{score}</BootstrapCard.Text>
+        {Graph ? <Graph /> : null}
       </BootstrapCard.Body>
     </BootstrapCard>
   );

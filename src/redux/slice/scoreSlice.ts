@@ -28,16 +28,9 @@ const scoreSlice = createSlice({
       state.low = low;
       state.totalScore = totalScore;
     },
-    clearUserScores(state, action) {
-      state.games = 0;
-      state.average = 0;
-      state.high = 0;
-      state.low = 0;
-      state.totalScore = 0;
-    },
   },
 });
 
-export const { setUserScores, clearUserScores } = scoreSlice.actions;
+export const { setUserScores } = scoreSlice.actions;
 
 export default scoreSlice.reducer;

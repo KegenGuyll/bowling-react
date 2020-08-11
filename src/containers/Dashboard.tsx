@@ -6,6 +6,7 @@ import { RootState } from '../redux/reducers/index';
 import db from '../config/firebaseInit';
 import { Dispatch } from 'redux';
 import { setUserScores } from '../redux/slice/scoreSlice';
+import Graph from '../components/dashboard/Graph';
 
 const Dashboard = () => {
   const user = useSelector((state: RootState) => state.user);
@@ -61,6 +62,11 @@ const Dashboard = () => {
             borderColor='#fd1c03'
             dark={true}
           />
+        </Col>
+      </Row>
+      <Row style={{ marginTop: '1rem' }}>
+        <Col xs={12}>
+          <Card title='Graph' borderColor='#0190fb' dark={true} Graph={Graph} />
         </Col>
       </Row>
     </div>

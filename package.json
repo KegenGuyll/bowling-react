@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@nivo/api": "^0.62.0",
+    "@nivo/core": "^0.62.0",
+    "@nivo/line": "^0.62.0",
     "@reduxjs/toolkit": "^1.3.6",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -25,6 +28,7 @@
     "react-scripts": "3.4.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
+    "robinhood-typescript": "0.0.1",
     "typescript": "^3.9.5"
   },
   "scripts": {
